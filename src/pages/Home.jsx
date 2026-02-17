@@ -3,7 +3,7 @@ import { brandDetails } from "../config";
 
 export default function Home() {
   return (
-    <section className="bg-secondary-50 min-h-[90vh] flex items-center">
+    <section className="bg-dark-900 min-h-[90vh] pt-12 pb-20">
       <div className="max-w-[1400px] mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
         {/* LEFT CONTENT */}
@@ -12,11 +12,11 @@ export default function Home() {
             Luxury Spa & Wellness
           </span>
 
-          <h1 className="mt-4 text-4xl md:text-5xl font-extrabold text-dark-900 leading-tight">
+          <h1 className="mt-4 text-4xl md:text-5xl font-extrabold text-white leading-tight">
             {brandDetails.name}
           </h1>
 
-          <p className="mt-6 text-gray-600 text-lg leading-relaxed max-w-xl">
+          <p className="mt-6 text-gray-300 text-lg leading-relaxed max-w-xl">
             A peaceful wellness destination designed for deep relaxation,
             rejuvenation, and complete mind & body balance. Experience premium
             massage and spa therapies in a calm, luxurious environment.
@@ -50,9 +50,9 @@ export default function Home() {
           </div>
 
           {/* Floating badge */}
-          <div className="absolute -bottom-6 -left-6 bg-white px-6 py-4 rounded-xl shadow-lg">
-            <p className="text-primary-600 font-bold text-lg">10+ Years</p>
-            <p className="text-sm text-gray-600">of Experience</p>
+          <div className="absolute -bottom-6 -left-6 bg-dark-800 px-6 py-4 rounded-xl shadow-lg border border-gray-700">
+            <p className="text-secondary-500 font-bold text-lg">10+ Years</p>
+            <p className="text-sm text-gray-300">of Experience</p>
           </div>
         </div>
 

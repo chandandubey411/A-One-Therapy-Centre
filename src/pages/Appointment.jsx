@@ -4,22 +4,22 @@ import spas from "../data/spa.json";
 
 export default function Appointment() {
   return (
-    <section className="bg-secondary-50 min-h-screen pt-28 pb-20">
+    <section className="bg-dark-900 min-h-screen pt-28 pb-20">
       <div className="max-w-5xl mx-auto px-6">
 
         {/* Heading */}
         <div className="text-center mb-12">
-          <h1 className="text-3xl md:text-4xl font-extrabold text-dark-900">
+          <h1 className="text-3xl md:text-4xl font-extrabold text-white">
             Book an Appointment
           </h1>
-          <p className="mt-4 text-gray-600">
+          <p className="mt-4 text-gray-300">
             Share your details and our team from {brandDetails.name} will contact
             you shortly.
           </p>
         </div>
 
         {/* Form Card */}
-        <div className="bg-white rounded-xl shadow-lg p-8 md:p-10 max-w-3xl mx-auto">
+        <div className="bg-dark-800 rounded-xl shadow-lg p-8 md:p-10 max-w-3xl mx-auto border border-gray-800">
           <form
             action="https://api.web3forms.com/submit"
             method="POST"
@@ -29,7 +29,7 @@ export default function Appointment() {
             <input
               type="hidden"
               name="access_key"
-              value="2c388088-80ff-415d-bfaa-efb126c84bda"
+              value="91272ddf-93ae-4969-8290-1f599564ccf2"
             />
 
             <input
@@ -40,7 +40,7 @@ export default function Appointment() {
 
             {/* Name */}
             <div>
-              <label className="block text-sm font-medium mb-1">
+              <label className="block text-sm font-medium mb-1 text-gray-300">
                 Full Name
               </label>
               <input
@@ -48,13 +48,13 @@ export default function Appointment() {
                 name="name"
                 required
                 placeholder="Your full name"
-                className="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                className="w-full bg-dark-900 border border-gray-700 text-white rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-500"
               />
             </div>
 
             {/* Phone */}
             <div>
-              <label className="block text-sm font-medium mb-1">
+              <label className="block text-sm font-medium mb-1 text-gray-300">
                 Phone Number
               </label>
               <input
@@ -62,13 +62,13 @@ export default function Appointment() {
                 name="phone"
                 required
                 placeholder="Your phone number"
-                className="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                className="w-full bg-dark-900 border border-gray-700 text-white rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-500"
               />
             </div>
 
             {/* Email */}
             <div>
-              <label className="block text-sm font-medium mb-1">
+              <label className="block text-sm font-medium mb-1 text-gray-300">
                 Email
               </label>
               <input
@@ -76,29 +76,29 @@ export default function Appointment() {
                 name="email"
                 required
                 placeholder="Your email address"
-                className="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                className="w-full bg-dark-900 border border-gray-700 text-white rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-500"
               />
             </div>
 
             {/* Service */}
             <div>
-              <label className="block text-sm font-medium mb-1">
+              <label className="block text-sm font-medium mb-1 text-gray-300">
                 Select Service
               </label>
               <select
                 name="service"
                 required
-                className="w-full border rounded-md px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-primary-500"
+                className="w-full bg-dark-900 border border-gray-700 text-white rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500"
               >
-                <option value="">Choose a service</option>
-                <optgroup label="Massage Services">
+                <option value="" className="bg-dark-900 text-gray-400">Choose a service</option>
+                <optgroup label="Massage Services" className="bg-dark-900 text-gray-200">
                   {massages.map((item) => (
                     <option key={item.slug} value={item.title}>
                       {item.title}
                     </option>
                   ))}
                 </optgroup>
-                <optgroup label="Spa Services">
+                <optgroup label="Spa Services" className="bg-dark-900 text-gray-200">
                   {spas.map((item) => (
                     <option key={item.slug} value={item.title}>
                       {item.title}
@@ -110,40 +110,40 @@ export default function Appointment() {
 
             {/* Date */}
             <div>
-              <label className="block text-sm font-medium mb-1">
+              <label className="block text-sm font-medium mb-1 text-gray-300">
                 Preferred Date
               </label>
               <input
                 type="date"
                 name="date"
                 required
-                className="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                className="w-full bg-dark-900 border border-gray-700 text-white rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-500 text-gray-200"
               />
             </div>
 
             {/* Time */}
             <div>
-              <label className="block text-sm font-medium mb-1">
+              <label className="block text-sm font-medium mb-1 text-gray-300">
                 Preferred Time
               </label>
               <input
                 type="time"
                 name="time"
                 required
-                className="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                className="w-full bg-dark-900 border border-gray-700 text-white rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500 text-gray-200"
               />
             </div>
 
             {/* Message */}
             <div>
-              <label className="block text-sm font-medium mb-1">
+              <label className="block text-sm font-medium mb-1 text-gray-300">
                 Additional Message (optional)
               </label>
               <textarea
                 name="message"
                 rows="4"
                 placeholder="Any specific requirement or message"
-                className="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                className="w-full bg-dark-900 border border-gray-700 text-white rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-500"
               ></textarea>
             </div>
 

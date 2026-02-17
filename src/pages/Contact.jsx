@@ -2,48 +2,48 @@ import { brandDetails } from "../config";
 
 export default function Contact() {
   return (
-    <section className="bg-secondary-50 min-h-screen pt-28 pb-20">
+    <section className="bg-dark-900 min-h-screen pt-28 pb-20">
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
 
         {/* LEFT : CONTACT DETAILS */}
         <div>
-          <h1 className="text-3xl font-extrabold text-dark-900 mb-4">
+          <h1 className="text-3xl font-extrabold text-white mb-4">
             Contact Us
           </h1>
 
-          <p className="text-gray-600 mb-8">
+          <p className="text-gray-300 mb-8">
             Get in touch with {brandDetails.name} for appointments, queries, or
             personalized spa experiences.
           </p>
 
-          <div className="space-y-5 text-dark-800">
+          <div className="space-y-5 text-gray-200">
             <div>
-              <p className="font-semibold">Business Name</p>
+              <p className="font-semibold text-primary-500">Business Name</p>
               <p>{brandDetails.name}</p>
             </div>
 
             <div>
-              <p className="font-semibold">Phone</p>
+              <p className="font-semibold text-primary-500">Phone</p>
               <a
                 href={`tel:${brandDetails.phone}`}
-                className="text-primary-600 hover:underline"
+                className="text-white hover:text-primary-500 transition"
               >
                 {brandDetails.phone}
               </a>
             </div>
 
             <div>
-              <p className="font-semibold">Email</p>
+              <p className="font-semibold text-primary-500">Email</p>
               <a
                 href={`mailto:${brandDetails.email}`}
-                className="text-primary-600 hover:underline"
+                className="text-white hover:text-primary-500 transition"
               >
                 {brandDetails.email}
               </a>
             </div>
 
             <div>
-              <p className="font-semibold">Address</p>
+              <p className="font-semibold text-primary-500">Address</p>
               <p className="whitespace-pre-line">
                 {brandDetails.address}
               </p>
@@ -52,8 +52,8 @@ export default function Contact() {
         </div>
 
         {/* RIGHT : CONTACT FORM */}
-        <div className="bg-white rounded-xl shadow-lg p-8">
-          <h2 className="text-2xl font-bold text-dark-900 mb-6">
+        <div className="bg-dark-800 rounded-xl shadow-lg p-8 border border-gray-800">
+          <h2 className="text-2xl font-bold text-white mb-6">
             Send Us a Message
           </h2>
 
@@ -66,7 +66,7 @@ export default function Contact() {
             <input
               type="hidden"
               name="access_key"
-              value="2c388088-80ff-415d-bfaa-efb126c84bda"
+              value="91272ddf-93ae-4969-8290-1f599564ccf2"
             />
 
             <input
@@ -76,53 +76,53 @@ export default function Contact() {
             />
 
             <div>
-              <label className="block text-sm font-medium mb-1">
+              <label className="block text-sm font-medium mb-1 text-gray-300">
                 Full Name
               </label>
               <input
                 type="text"
                 name="name"
                 required
-                className="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                className="w-full bg-dark-900 border border-gray-700 text-white rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-500"
                 placeholder="Your name"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-1">
+              <label className="block text-sm font-medium mb-1 text-gray-300">
                 Phone Number
               </label>
               <input
                 type="tel"
                 name="phone"
                 required
-                className="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                className="w-full bg-dark-900 border border-gray-700 text-white rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-500"
                 placeholder="Your phone number"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-1">
+              <label className="block text-sm font-medium mb-1 text-gray-300">
                 Email
               </label>
               <input
                 type="email"
                 name="email"
                 required
-                className="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                className="w-full bg-dark-900 border border-gray-700 text-white rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-500"
                 placeholder="Your email"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-1">
+              <label className="block text-sm font-medium mb-1 text-gray-300">
                 Message
               </label>
               <textarea
                 name="message"
                 rows="4"
                 required
-                className="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                className="w-full bg-dark-900 border border-gray-700 text-white rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-500"
                 placeholder="Write your message"
               ></textarea>
             </div>

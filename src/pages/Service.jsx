@@ -4,15 +4,15 @@ import spas from "../data/spa.json";
 
 export default function Service() {
   return (
-    <section className="bg-secondary-50 pt-28 pb-20">
+    <section className="bg-dark-900 pt-28 pb-20">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* PAGE HEADER */}
         <div className="text-center mb-16">
-          <h1 className="text-3xl md:text-4xl font-extrabold text-dark-900">
+          <h1 className="text-3xl md:text-4xl font-extrabold text-white">
             Our Services
           </h1>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+          <p className="mt-4 text-gray-300 max-w-2xl mx-auto">
             Explore our wide range of massage and spa therapies designed to
             relax, rejuvenate, and refresh your body and mind.
           </p>
@@ -20,7 +20,7 @@ export default function Service() {
 
         {/* ================= MASSAGE SERVICES ================= */}
         <div className="mb-20">
-          <h2 className="text-2xl font-bold text-dark-900 mb-8">
+          <h2 className="text-2xl font-bold text-white mb-8">
             Massage Services
           </h2>
 
@@ -28,7 +28,7 @@ export default function Service() {
             {massages.map((item) => (
               <div
                 key={item.slug}
-                className="bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden"
+                className="bg-dark-800 rounded-xl shadow hover:shadow-xl transition overflow-hidden border border-gray-800"
               >
                 <img
                   src={item.coverImage}
@@ -37,15 +37,15 @@ export default function Service() {
                 />
 
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-dark-900">
+                  <h3 className="text-xl font-semibold text-white">
                     {item.title}
                   </h3>
 
-                  <p className="text-gray-600 text-sm mt-3 line-clamp-3">
+                  <p className="text-gray-300 text-sm mt-3 line-clamp-3">
                     {item.description}
                   </p>
 
-                  <div className="mt-4 text-sm text-gray-700">
+                  <div className="mt-4 text-sm text-gray-400">
                     <p><b>Duration:</b> {item.duration}</p>
                     <p><b>Price:</b> {item.price}</p>
                   </div>
@@ -64,7 +64,7 @@ export default function Service() {
 
         {/* ================= SPA SERVICES ================= */}
         <div>
-          <h2 className="text-2xl font-bold text-dark-900 mb-8">
+          <h2 className="text-2xl font-bold text-white mb-8">
             Spa Services
           </h2>
 
@@ -72,7 +72,7 @@ export default function Service() {
             {spas.map((item) => (
               <div
                 key={item.slug}
-                className="bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden"
+                className="bg-dark-800 rounded-xl shadow hover:shadow-xl transition overflow-hidden border border-gray-800"
               >
                 <img
                   src={item.coverImage}
@@ -81,15 +81,15 @@ export default function Service() {
                 />
 
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-dark-900">
+                  <h3 className="text-xl font-semibold text-white">
                     {item.title}
                   </h3>
 
-                  <p className="text-gray-600 text-sm mt-3 line-clamp-3">
+                  <p className="text-gray-300 text-sm mt-3 line-clamp-3">
                     {item.description}
                   </p>
 
-                  <div className="mt-4 text-sm text-gray-700">
+                  <div className="mt-4 text-sm text-gray-400">
                     <p><b>Duration:</b> {item.duration}</p>
                     <p><b>Price:</b> {item.price}</p>
                   </div>

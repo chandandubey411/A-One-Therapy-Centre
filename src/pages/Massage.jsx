@@ -18,27 +18,27 @@ export default function Massage() {
   }
 
   return (
-    <section className="pt-10 pb-20 bg-secondary-50">
+    <section className="pt-20 pb-20 bg-dark-900">
       <div className="max-w-[1200px] mx-auto px-6">
 
         {/* HEADER */}
         <div className="grid md:grid-cols-2 gap-10 items-center mb-16">
           <div>
-            <h1 className="text-3xl md:text-4xl font-extrabold text-dark-900">
+            <h1 className="text-3xl md:text-4xl font-extrabold text-white">
               {massage.title}
             </h1>
 
-            <p className="mt-4 text-gray-600 leading-relaxed">
+            <p className="mt-4 text-gray-300 leading-relaxed">
               {massage.description}
             </p>
 
-            <div className="mt-6 space-y-2 text-gray-700">
+            <div className="mt-6 space-y-2 text-gray-200">
               <p><b>Duration:</b> {massage.duration}</p>
               <p><b>Price:</b> {massage.price}</p>
             </div>
           </div>
 
-          <div className="rounded-2xl overflow-hidden shadow-xl">
+          <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-800">
             <img
               src={massage.coverImage}
               alt={massage.title}
@@ -49,7 +49,7 @@ export default function Massage() {
 
         {/* BENEFITS */}
         <div className="mb-16">
-          <h2 className="text-2xl font-bold text-dark-900 mb-6">
+          <h2 className="text-2xl font-bold text-white mb-6">
             Benefits
           </h2>
 
@@ -57,7 +57,7 @@ export default function Massage() {
             {massage.benefits.map((benefit, i) => (
               <li
                 key={i}
-                className="bg-white p-5 rounded-xl shadow text-gray-700"
+                className="bg-dark-800 p-5 rounded-xl shadow text-gray-300 border border-gray-800"
               >
                 ✔ {benefit}
               </li>
@@ -67,7 +67,7 @@ export default function Massage() {
 
         {/* THERAPISTS GALLERY */}
         <div>
-          <h2 className="text-2xl font-bold text-dark-900 mb-6">
+          <h2 className="text-2xl font-bold text-white mb-6">
             Our Therapists
           </h2>
 

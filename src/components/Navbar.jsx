@@ -27,8 +27,8 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled
-          ? "bg-white/70 backdrop-blur-md shadow-md"
-          : "bg-secondary-50"
+        ? "bg-dark-900/90 backdrop-blur-md shadow-md border-b border-white/10"
+        : "bg-transparent"
         }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
@@ -38,7 +38,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Menu */}
-        <nav className="hidden lg:flex items-center gap-8 font-medium text-dark-800">
+        <nav className="hidden lg:flex items-center gap-8 font-medium text-gray-200">
           <Link to="/">Home</Link>
           <Link to="/about">About Us</Link>
 
@@ -222,12 +222,12 @@ function DesktopMenu({ label, items, name, openMenu, setOpenMenu, basePath }) {
       {openMenu === name && (
         <div className="absolute top-full left-0 w-72">
           <div className="h-3" />
-          <div className="bg-white rounded-md shadow-xl border overflow-hidden">
+          <div className="bg-dark-800 rounded-md shadow-xl border border-gray-700 overflow-hidden">
             {items.map((item) => (
               <Link
                 key={item}
                 to={`${basePath}/${makeSlug(item)}`}
-                className="block px-5 py-3 text-sm hover:bg-primary-600 hover:text-white border-b last:border-0 transition"
+                className="block px-5 py-3 text-sm text-gray-200 hover:bg-primary-600 hover:text-white border-b border-gray-700 last:border-0 transition"
               >
                 {item}
               </Link>
@@ -246,8 +246,8 @@ function MobileLink({ to, label, setMobileOpen, highlight }) {
       to={to}
       onClick={() => setMobileOpen(false)}
       className={`block px-5 py-4 font-semibold ${highlight
-          ? "bg-primary-600 text-white"
-          : "hover:bg-gray-800"
+        ? "bg-primary-600 text-white"
+        : "hover:bg-gray-800"
         }`}
     >
       {label}
@@ -261,8 +261,8 @@ function MobileAccordion({ title, open, onClick, items, basePath, setMobileOpen 
       <button
         onClick={onClick}
         className={`w-full flex justify-between items-center px-5 py-4 font-semibold ${open
-            ? "bg-accent-500 text-black"
-            : "hover:bg-gray-800"
+          ? "bg-accent-500 text-black"
+          : "hover:bg-gray-800"
           }`}
       >
         {title}
