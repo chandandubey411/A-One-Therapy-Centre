@@ -51,7 +51,7 @@ export default function Home() {
 
           {/* Floating badge */}
           <div className="absolute -bottom-6 -left-6 bg-dark-800 px-6 py-4 rounded-xl shadow-lg border border-gray-700">
-            <p className="text-secondary-500 font-bold text-lg">10+ Years</p>
+            <p className="text-primary-500 font-bold text-lg">10+ Years</p>
             <p className="text-sm text-gray-300">of Experience</p>
           </div>
         </div>
